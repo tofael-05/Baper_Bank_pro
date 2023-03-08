@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baaper Bank Project</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css"  rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- Header section  -->
+    <header>
+    <h1 class="text-center text-5xl text-red-600 font-bold mt-12"><span class="text-green-600">Bangladesh!</span> Bank</h1>
+    </header>
+
+    <!-- Deposite, Withdraw and Total  -->
+
+    <main class="w-[80%] mx-auto text-white mt-12">
+        <section class="grid md:grid-cols-3 gap-6">
+            <article class="bg-sky-600 p-4 rounded-lg">
+                <h2 class="text-xl font-bold">Deposite</h2>
+                <h2 id="deposite-total" class="py-1">$ <span>00</span></h2>
+            </article>
+            <article class="bg-sky-400 p-4 rounded-lg">
+                <h2 class="text-xl font-bold">Withdraw</h2>
+                <h2 id="withdraw-total" class="py-1">$ <span>00</span></h2>
+            </article>
+            <article class="bg-sky-800 p-4 rounded-lg">
+                <h2 class="text-xl font-bold">Total</h2>
+                <h2 id="total" class="py-1">$ <span>00</span></h2>
+            </article>
+        </section>
+
+
+        <!-- Deposite and Withdraw btn section  -->
+        <section class="md:w-1/2 mx-2 md:mx-auto mt-10 bg-slate-900 rounded-lg text-white">
+            <div class="mb-4 border-b border-gray-200 dark:border-gray-700 text-black">
+                <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+                    <li class="mr-2" role="presentation">
+                        <button class="inline-block p-4 border-b-2 rounded-t-lg" id="deposit-tab" data-tabs-target="#deposit" type="button" role="tab" aria-controls="deposit" aria-selected="false">Deposit</button>
+                    </li>
+                    <li class="mr-2" role="presentation">
+                        <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="withdraw-tab" data-tabs-target="#withdraw" type="button" role="tab" aria-controls="withdraw" aria-selected="false">Withdraw</button>
+                    </li>
+                </ul>
+            </div>
+            <div id="myTabContent">
+                <div class="hidden p-4 rounded-lg" id="deposit" role="tabpanel" aria-labelledby="deposit-tab">
+                    <div>
+                        <form class="flex flex-col p-5 rounded-xl gap-5 ">
+                            <h2 class="text-xl font-bold">Deposite Money</h2>
+                            <input type="text" class="p-2 rounded-md text-black border-0 outline-none" autocomplete="off" placeholder="Deposit Money">
+                            <button class="bg-sky-700 p-2 rounded-md">Deposit</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="hidden p-4 rounded-lg " id="withdraw" role="tabpanel" aria-labelledby="withdraw-tab">
+                    <div>
+                        <form class="flex flex-col p-5 rounded-xl gap-5">
+                            <h2 class="text-xl font-bold">Withdraw Money</h2>
+                            <input type="text" class="p-2 rounded-md text-black border-0 outline-none" autocomplete="off" placeholder="Withdraw Money">
+                            <button class="bg-sky-700 p-2 rounded-md">Withdraw</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- <section class="grid md:grid-cols-2 gap-6 mt-6">
+            <div class="bg-yellow-400 rounded-lg">
+                <form class="flex flex-col gap-6 rounded-lg p-6">
+                    <h2 class="text-2xl">Deposite Money</h2>
+                    <input class="p-2 rounded-md" type="number" placeholder="$ Deposite amount">
+                    <button class="bg-green-600 p-1 text-2xl rounded-lg">Deposite</button>
+                </form>
+            </div>
+            <div class="bg-sky-700 p-6 rounded-lg">
+                <form class="flex flex-col gap-6 ">
+                    <h2 class="text-2xl">Withdraw Money</h2>
+                    <input class="p-2 rounded-md" type="number" placeholder="$ Withdraw amount">
+                    <button class="bg-green-600 p-1 text-2xl rounded-lg">Withdraw</button>
+                </form>
+            </div>
+        </section> -->
+    </main>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+
+    <!-- JS link connect  -->
+    <script src="js/deposit.js"></script>
+    <script src="js/withdraw.js"></script>
+    <script src="js/utilities.js"></script>
+</body>
+</html>
