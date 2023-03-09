@@ -22,15 +22,15 @@
         <section class="grid md:grid-cols-3 gap-6">
             <article class="bg-sky-600 p-4 rounded-lg">
                 <h2 class="text-xl font-bold">Deposite</h2>
-                <h2 id="deposite-total" class="py-1">$ <span>00</span></h2>
+                <h2 class="py-1">$ <span id="deposite-total">00</span></h2>
             </article>
             <article class="bg-sky-400 p-4 rounded-lg">
                 <h2 class="text-xl font-bold">Withdraw</h2>
-                <h2 id="withdraw-total" class="py-1">$ <span>00</span></h2>
+                <h2 class="py-1">$ <span id="withdraw-total">00</span></h2>
             </article>
             <article class="bg-sky-800 p-4 rounded-lg">
                 <h2 class="text-xl font-bold">Total</h2>
-                <h2 id="total" class="py-1">$ <span>00</span></h2>
+                <h2 class="py-1">$ <span id="balance-total">00</span></h2>
             </article>
         </section>
 
@@ -50,18 +50,18 @@
             <div id="myTabContent">
                 <div class="hidden p-4 rounded-lg" id="deposit" role="tabpanel" aria-labelledby="deposit-tab">
                     <div>
-                        <form class="flex flex-col p-5 rounded-xl gap-5 ">
+                        <form id="deposite-form" class="flex flex-col p-5 rounded-xl gap-5 ">
                             <h2 class="text-xl font-bold">Deposite Money</h2>
-                            <input type="text" class="p-2 rounded-md text-black border-0 outline-none" autocomplete="off" placeholder="Deposit Money">
+                            <input id="input-deposite" type="text" class="p-2 rounded-md text-black border-0 outline-none" autocomplete="off" placeholder="Deposit Money">
                             <button class="bg-sky-700 p-2 rounded-md">Deposit</button>
                         </form>
                     </div>
                 </div>
                 <div class="hidden p-4 rounded-lg " id="withdraw" role="tabpanel" aria-labelledby="withdraw-tab">
                     <div>
-                        <form class="flex flex-col p-5 rounded-xl gap-5">
+                        <form id="withdraw-form" class="flex flex-col p-5 rounded-xl gap-5">
                             <h2 class="text-xl font-bold">Withdraw Money</h2>
-                            <input type="text" class="p-2 rounded-md text-black border-0 outline-none" autocomplete="off" placeholder="Withdraw Money">
+                            <input id="input-whithdraw" type="text" class="p-2 rounded-md text-black border-0 outline-none" autocomplete="off" placeholder="Withdraw Money">
                             <button class="bg-sky-700 p-2 rounded-md">Withdraw</button>
                         </form>
                     </div>
@@ -92,8 +92,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
 
     <!-- JS link connect  -->
-    <script src="js/deposit.js"></script>
-    <script src="js/withdraw.js"></script>
-    <script src="js/utilities.js"></script>
+
+    <script type="module" src="js/deposit.js"></script>
+    
 </body>
 </html>

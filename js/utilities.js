@@ -1,6 +1,15 @@
-git init
-git add .
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/tofael-05/Baper_Bank_pro.git
-git push -u origin main
+export const inputMoney = (id) =>{
+    const input = document.getElementById(id),
+    inputStrValue = input.value;
+    input.value = '';
+    return parseFloat(inputStrValue)
+}
+
+export const textMoney = (id) =>{
+    const spanTag = document.getElementById(id),
+    spanTagValue = spanTag.innerText;
+    return parseFloat(spanTagValue);
+}
+export const setValue = (id, value) =>{
+    document.getElementById(id).innerText = value;
+}
